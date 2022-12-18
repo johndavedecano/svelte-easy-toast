@@ -2,6 +2,8 @@
 
 A pretty simple toast library for svelte
 
+![My Image](https://raw.github.com/johndavedecano/svelte-easy-toast/master/thumbnail.png)
+
 ## Installation
 
 ```bash
