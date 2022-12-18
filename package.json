@@ -1,6 +1,21 @@
 {
 	"name": "svelte-easy-toast",
+	"description": "A pretty simple toast library for svelte",
 	"version": "0.0.1",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/johndavedecano/svelte-easy-toast.git"
+	},
+	"keywords": [
+		"svelte-easy-toast"
+	],
+	"author": "John Dave Decano<johndavedecano@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/johndavedecano/svelte-easy-toast/issues"
+	},
+	"homepage": "https://github.com/johndavedecano/svelte-easy-toast#readme",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
@@ -28,6 +43,5 @@
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
-	},
-	"type": "module"
+	}
 }
