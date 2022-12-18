@@ -1,38 +1,48 @@
-# create-svelte
+# svelte-easy-toast
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A pretty simple toast library for svelte
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm i svelte-easy-toast
 ```
 
-## Developing
+```
+<script>
+	import { SvelteEasyToast, toast } from 'svelte-easy-toast';
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+    toast({
+        type: 'primary', // dark, danger, success, info, warning, default, error
+        position: 'top-right', // top-left, top-center, bottom-left, bottom-right, bottom-center
+        text: 'If you're seeing this, you've probably already done this step. Congrats!',
+        title: 'Svelte is too awesome!',
+    });
+</script>
 
-```bash
-npm run dev
+<button on:click={showToast}>show Toast</button>
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<SvelteEasyToast />
 ```
 
-## Building
 
-To create a production version of your app:
+## MIT License
+Copyright (c) 2022 J.D Decano
 
-```bash
-npm run build
-```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-You can preview the production build with `npm run preview`.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
