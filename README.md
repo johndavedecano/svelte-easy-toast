@@ -12,14 +12,16 @@ npm i svelte-easy-toast
 
 ```
 <script>
-	import { SvelteEasyToast, toast } from 'svelte-easy-toast';
-
-    toast({
-        type: 'primary', // dark, danger, success, info, warning, default, error
-        position: 'top-right', // top-left, top-center, bottom-left, bottom-right, bottom-center
-        text: 'If you're seeing this, you've probably already done this step. Congrats!',
-        title: 'Svelte is too awesome!',
-    });
+     import { SvelteEasyToast, toast } from 'svelte-easy-toast';
+     
+     const showToast = () => {
+	    toast({
+		type: 'primary', // dark, danger, success, info, warning, default, error
+		position: 'top-right', // top-left, top-center, bottom-left, bottom-right, bottom-center
+		text: 'If you're seeing this, you've probably already done this step. Congrats!',
+		title: 'Svelte is too awesome!',
+	    });
+     }
 </script>
 
 <button on:click={showToast}>show Toast</button>
