@@ -10,7 +10,8 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: staticAdapter()
+		adapter: staticAdapter(),
+		outDir: './docs'
 	}
 };
 
