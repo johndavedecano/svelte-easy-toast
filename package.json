@@ -1,7 +1,7 @@
 {
 	"name": "svelte-easy-toast",
 	"description": "A pretty simple toast library for svelte",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
 	"repository": {
 		"type": "git",
