@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-	import { fade, scale } from 'svelte/transition';
 
 	import type { ToastOption } from '$lib/core/toast.types';
-
 	import toastStore from '$lib/core/toast.store';
 	import SvelteToastItem from './SvelteToastItem.svelte';
 
@@ -62,7 +60,11 @@
 	<div class="svelte-et svelte-et-bottom svelte-et-bottom-left">
 		{#each bottomLeft as item (item.id)}
 			{#if showing[parseId(item)]}
-				<SvelteToastItem {item} on:close={() => closeItem(item.id)} />
+				<svelte:component
+					this={item.customComponent ? item.customComponent : SvelteToastItem}
+					{item}
+					on:close={() => closeItem(item.id)}
+				/>
 			{/if}
 		{/each}
 	</div>
@@ -72,7 +74,11 @@
 	<div class="svelte-et svelte-et-bottom svelte-et-bottom-right">
 		{#each bottomRight as item (item.id)}
 			{#if showing[parseId(item)]}
-				<SvelteToastItem {item} on:close={() => closeItem(item.id)} />
+				<svelte:component
+					this={item.customComponent ? item.customComponent : SvelteToastItem}
+					{item}
+					on:close={() => closeItem(item.id)}
+				/>
 			{/if}
 		{/each}
 	</div>
@@ -82,7 +88,11 @@
 	<div class="svelte-et svelte-et-bottom svelte-et-bottom-center">
 		{#each bottomCenter as item (item.id)}
 			{#if showing[parseId(item)]}
-				<SvelteToastItem {item} on:close={() => closeItem(item.id)} />
+				<svelte:component
+					this={item.customComponent ? item.customComponent : SvelteToastItem}
+					{item}
+					on:close={() => closeItem(item.id)}
+				/>
 			{/if}
 		{/each}
 	</div>
@@ -92,7 +102,11 @@
 	<div class="svelte-et svelte-et-top svelte-et-top-left">
 		{#each topLeft as item (item.id)}
 			{#if showing[parseId(item)]}
-				<SvelteToastItem {item} on:close={() => closeItem(item.id)} />
+				<svelte:component
+					this={item.customComponent ? item.customComponent : SvelteToastItem}
+					{item}
+					on:close={() => closeItem(item.id)}
+				/>
 			{/if}
 		{/each}
 	</div>
@@ -102,7 +116,11 @@
 	<div class="svelte-et svelte-et-top svelte-et-top-right">
 		{#each topRight as item (item.id)}
 			{#if showing[parseId(item)]}
-				<SvelteToastItem {item} on:close={() => closeItem(item.id)} />
+				<svelte:component
+					this={item.customComponent ? item.customComponent : SvelteToastItem}
+					{item}
+					on:close={() => closeItem(item.id)}
+				/>
 			{/if}
 		{/each}
 	</div>
@@ -112,7 +130,11 @@
 	<div class="svelte-et svelte-et-top svelte-et-top-center">
 		{#each topCenter as item (item.id)}
 			{#if showing[parseId(item)]}
-				<SvelteToastItem {item} on:close={() => closeItem(item.id)} />
+				<svelte:component
+					this={item.customComponent ? item.customComponent : SvelteToastItem}
+					{item}
+					on:close={() => closeItem(item.id)}
+				/>
 			{/if}
 		{/each}
 	</div>

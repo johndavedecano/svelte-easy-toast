@@ -1,7 +1,12 @@
 <script lang="ts">
 	import toast from '$lib/core/toast';
-	import type { ToastOption, ToastPosition } from '$lib/core/toast.types';
+	import type { ToastOption } from '$lib/core/toast.types';
 	import { SvelteEasyToast } from '$lib/index';
+	import CustomComponent from './../CustomComponent.svelte';
+
+	let useCustomComponent = 'no';
+
+	$: console.log(useCustomComponent);
 
 	let settings: ToastOption = {
 		type: 'primary',
@@ -11,7 +16,12 @@
 		delay: 3000
 	};
 
-	const handleClick = (): void => toast(settings);
+	const handleClick = (): void => {
+		if (useCustomComponent == 'yes') {
+			settings.customComponent = CustomComponent;
+		}
+		toast(settings);
+	};
 </script>
 
 <div class="px-4 py-5 my-5 text-center">
@@ -58,6 +68,14 @@
 					<label for="">Delay</label>
 					<input type="number" bind:value={settings.delay} class="form-control form-control-lg" />
 					<span class="helper-text">Milliseconds</span>
+				</div>
+
+				<div class="form-group mb-3">
+					<label for="">Use Custom Component</label>
+					<select bind:value={useCustomComponent} class="form-control form-control-lg">
+						<option value="no"> No </option>
+						<option value="yes"> Yes </option>
+					</select>
 				</div>
 
 				<div class="form-group mb-3">

@@ -1,3 +1,5 @@
+import type { ComponentType } from 'svelte/internal';
+
 export type ToastPosition =
 	| 'top-left'
 	| 'top-right'
@@ -11,8 +13,9 @@ export type ToastOption = {
 	type?: string;
 	position?: ToastPosition;
 	delay?: number;
-    title?: string;
+	title?: string;
 	text?: string;
-    showClose?: boolean;
-    closeOnClick?: boolean;
+	showClose?: boolean;
+	closeOnClick?: boolean;
+	customComponent?: ComponentType;
 };
