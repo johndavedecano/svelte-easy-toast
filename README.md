@@ -26,6 +26,25 @@ npm i svelte-easy-toast
 
 ```
 
+## API
+
+- **type - String(optional)** - default, success, info, warning, dark, error, success
+- **position - ToastPosition(optional)** - Toast positions
+- **delay - Number(optional)** - How long until the toast to be closed
+- **title - String(optional)** - Toast title
+- **text - String(optional)** - The message that youd like to show on the toast body
+- **showClose - String(optional)** - Whether to show the close icon
+- **closeOnClick - Boolean(optional)** - Whether close the toast when it is clicked
+- **customComponent - ComponentType(optional)** - Use a custom component as toast
+
+### Toast Positions
+- top-left
+- top-right
+- top-center
+- bottom-left
+- bottom-right
+- bottom-center;
+
 ## Using Custom Component
 
 To use custom toast component just follow the template below.
