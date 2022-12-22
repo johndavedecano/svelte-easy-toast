@@ -17,8 +17,11 @@
 	};
 
 	const handleClick = (): void => {
-		if (useCustomComponent == 'yes') {
+		console.log(useCustomComponent);
+		if (useCustomComponent === 'yes') {
 			settings.customComponent = CustomComponent;
+		} else {
+			settings.customComponent = undefined;
 		}
 		toast(settings);
 	};
