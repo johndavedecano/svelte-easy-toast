@@ -43,7 +43,7 @@ npm i svelte-easy-toast
 - top-center
 - bottom-left
 - bottom-right
-- bottom-center;l
+- bottom-center
 
 ## Using Custom Component
 
