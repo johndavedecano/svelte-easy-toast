@@ -39,11 +39,11 @@ npm i svelte-easy-toast
 
 ### Toast Positions
 - top-left
-- top-right
+- top-right - default
 - top-center
 - bottom-left
 - bottom-right
-- bottom-center;
+- bottom-center;l
 
 ## Using Custom Component
 
