@@ -36,7 +36,12 @@
 	class:svelte-et-alert-warning={item.type === ToastTheme.WARNING}
 	class:svelte-et-alert-error={item.type === ToastTheme.ERROR}
 >
-	<button class="svelte-et-alert-content" onclick={onClickContent}>
+	<svelte:element
+		this={item.closeOnClick ? 'button' : 'div'}
+		role={item.closeOnClick ? 'button' : ''}
+		class="svelte-et-alert-content"
+		onclick={onClickContent}
+	>
 		{#if item.title}
 			<div class="svelte-et-header">
 				<div class="svelte-et-title">
@@ -50,7 +55,7 @@
 		<div class="svelte-et-text">
 			{item.text}
 		</div>
-	</button>
+	</svelte:element>
 </div>
 
 <style>
