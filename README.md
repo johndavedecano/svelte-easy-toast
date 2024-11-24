@@ -9,7 +9,16 @@ npm i svelte-easy-toast
 Add SvelteEastToast wrapper component to your root layout(+layout.svelte)
 
 ```javascript
-import { SvelteEasyToast } from 'svelte-easy-toast';
+<script>
+	import SvelteEasyToast from 'svelte-easy-toast/components/SvelteEasyToast.svelte';
+	import { createToastStore } from 'svelte-easy-toast/core/toast.store.svelte';
+
+	const { children } = $props();
+
+	createToastStore();
+</script>
+
+{@render children()}
 
 <SvelteEasyToast />
 
@@ -17,7 +26,7 @@ import { SvelteEasyToast } from 'svelte-easy-toast';
 
 ```javascript
 <script>
-   	import { useToast } from 'svelte-easy-toast';
+ 	import { useToast } from 'svelte-easy-toast/core/toast.store.svelte';
 
 	let ToastStore = useToast();
 
